@@ -49,9 +49,3 @@ simon_algorithm(simon_query("101"))  # ['101']
 - **Little-endian (Qiskit):** o qubit 0 é o caractere mais à direita de uma string de bits. Por isso os oráculos usam `reversed(s)`. As strings medidas e os candidatos de `find_s` estão na mesma convenção, então lá não é preciso inverter.
 - **Oráculo do Simon:** a camada 1 copia `x` para a saída. A camada 2 escolhe um `i` com `sᵢ = 1` e, se `xᵢ = 1`, faz XOR de `s` inteiro na saída. Todos os CNOTs dessa camada têm **o mesmo controle** `i`.
 - **`find_s`** devolve todos os candidatos. Uma lista com mais de um elemento significa que faltam medidas independentes.
-
-## Próximos passos
-
-- [ ] Simon: eliminação gaussiana em GF(2) no lugar da busca exaustiva
-- [ ] Simon: laço adaptativo que executa até restar um único candidato
-- [ ] Oráculos de Simon aleatórios, para que `s` não fique visível no circuito
